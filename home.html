@@ -131,6 +131,54 @@
         #previews .file-row.dz-success .delete {
             display: block;
         }
+
+        /* for small screens less than 768 */
+        @media (max-width: 767px) {
+
+            div.table .file-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            #actions {
+                margin: 2em 0;
+            }
+            .progress {
+                width: 100%;
+            }
+            div.table {
+                display: flex;
+                justify-content: center;
+            }
+            div.table .file-row > div {
+                display: flex;
+                align-items: stretch;
+                flex-direction: column;
+                justify-content: center;
+            }
+            div.table .file-row > div:last-child {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            div.table .file-row:nth-child(odd) {
+                background: #f9f9f9;
+            }
+
+            #previews button.btn {
+                padding: 0.25rem 0.5rem;
+                font-size: .875rem;
+                border-radius: 0.2rem;
+            }
+
+            p.name {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
     </style>
     <link
             rel="stylesheet"
