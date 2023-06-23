@@ -89,7 +89,8 @@
 
         /* Mimic table appearance */
         div.table {
-            display: table;
+            display: flex;
+            justify-content: center;
         }
         div.table .file-row {
             display: table-row;
@@ -331,9 +332,6 @@
                     myDropzone.removeAllFiles(true)
                     console.log('cancel')
                 }
-
-                // Now fake the file upload, since GitHub does not handle file uploads
-                // and returns a 404
 
                 var minSteps = 6,
                     maxSteps = 60,
